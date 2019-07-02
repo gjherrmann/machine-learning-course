@@ -193,14 +193,14 @@
 <h1>Principal Component Analysis<a class="headerlink" href="#principal-component-analysis" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#introduction" id="id5">Introduction</a></li>
-<li><a class="reference internal" href="#motivation" id="id6">Motivation</a></li>
-<li><a class="reference internal" href="#dimensionality-reduction" id="id7">Dimensionality Reduction</a></li>
-<li><a class="reference internal" href="#pca-example" id="id8">PCA Example</a></li>
-<li><a class="reference internal" href="#number-of-components" id="id9">Number of Components</a></li>
-<li><a class="reference internal" href="#conclusion" id="id10">Conclusion</a></li>
-<li><a class="reference internal" href="#code-example" id="id11">Code Example</a></li>
-<li><a class="reference internal" href="#references" id="id12">References</a></li>
+<li><p><a class="reference internal" href="#introduction" id="id5">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#motivation" id="id6">Motivation</a></p></li>
+<li><p><a class="reference internal" href="#dimensionality-reduction" id="id7">Dimensionality Reduction</a></p></li>
+<li><p><a class="reference internal" href="#pca-example" id="id8">PCA Example</a></p></li>
+<li><p><a class="reference internal" href="#number-of-components" id="id9">Number of Components</a></p></li>
+<li><p><a class="reference internal" href="#conclusion" id="id10">Conclusion</a></p></li>
+<li><p><a class="reference internal" href="#code-example" id="id11">Code Example</a></p></li>
+<li><p><a class="reference internal" href="#references" id="id12">References</a></p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
@@ -210,9 +210,9 @@ of interconnected variables and choose the ones that best suit a model.
 This process of focusing in on only a few variables is called
 <strong>dimensionality reduction</strong>, and helps reduce complexity of our
 dataset. At its root, principal component analysis <em>summarizes</em> data.</p>
-<div class="figure" id="id1">
+<div class="figure align-default" id="id1">
 <img alt="../../_images/pca4.png" src="../../_images/pca4.png" />
-<p class="caption"><span class="caption-text">Ref: <a class="reference external" href="https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues">https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues</a></span></p>
+<p class="caption"><span class="caption-text">Ref: <a class="reference external" href="https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues">https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues</a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="motivation">
@@ -247,9 +247,9 @@ components.</p>
 variables and calculating a set of direction and magnitude pairs (vectors)
 to represent them. For example, let’s consider a small example dataset
 plotted below:</p>
-<div class="figure" id="id2">
+<div class="figure align-default" id="id2">
 <img alt="../../_images/pca1.png" src="../../_images/pca1.png" />
-<p class="caption"><span class="caption-text">Ref: <a class="reference external" href="https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c">https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c</a></span></p>
+<p class="caption"><span class="caption-text">Ref: <a class="reference external" href="https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c">https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c</a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Here we can see two direction pairs, represented by the red and green
 lines. In this scenario, the red line has a greater magnitude as the
@@ -258,9 +258,9 @@ green direction. Principal component analysis will use the vector
 with the greater magnitude to transform the data into a smaller
 feature space, reducing dimensionality. For example, the above graph
 would be transformed into the following:</p>
-<div class="figure" id="id3">
+<div class="figure align-default" id="id3">
 <img alt="../../_images/pca2.png" src="../../_images/pca2.png" />
-<p class="caption"><span class="caption-text">Ref: <a class="reference external" href="https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c">https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c</a></span></p>
+<p class="caption"><span class="caption-text">Ref: <a class="reference external" href="https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c">https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c</a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>By transforming our data in this way, we’ve ignored a feature that
 is less important to our model - that is, higher variation along the
@@ -280,7 +280,7 @@ analysis can be used to just remove a single feature, but it is often
 useful to reduce several. There are several strategies you can employ
 to decide how many feature reductions to perform:</p>
 <ol class="arabic">
-<li><p class="first"><strong>Arbitrarily</strong></p>
+<li><p><strong>Arbitrarily</strong></p>
 <p>This simply involves picking a number of features to keep for your
 given model. This method is highly dependent on your dataset and
 what you want to convey. For instance, it may be beneficial to
@@ -288,16 +288,16 @@ represent your higher-order data on a 2D space for visualization.
 In this case, you would perform feature reduction until you have
 two features.</p>
 </li>
-<li><p class="first"><strong>Percent of cumulative variability</strong></p>
+<li><p><strong>Percent of cumulative variability</strong></p>
 <p>Part of the principal component analysis calculation involves
 finding a proportion of variance which approaches 1 through each
 round of PCA performed. This method of choosing the number of
 feature reduction steps involves selecting a target variance
 percentage. For instance, let’s look at a graph of cumulative
 variance at each level of PCA for a theoretical dataset:</p>
-<div class="figure" id="id4">
+<div class="figure align-default" id="id4">
 <img alt="../../_images/pca3.png" src="../../_images/pca3.png" />
-<p class="caption"><span class="caption-text">Ref: <a class="reference external" href="https://www.centerspace.net/clustering-analysis-part-i-principal-component-analysis-pca">https://www.centerspace.net/clustering-analysis-part-i-principal-component-analysis-pca</a></span></p>
+<p class="caption"><span class="caption-text">Ref: <a class="reference external" href="https://www.centerspace.net/clustering-analysis-part-i-principal-component-analysis-pca">https://www.centerspace.net/clustering-analysis-part-i-principal-component-analysis-pca</a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <p>The above image is called a scree plot, and is a representation
 of the cumulative and current proportion of variance for each
@@ -306,7 +306,7 @@ we would use at least 6 principal components based on this scree plot.
 Aiming for 100% variance is not generally recommended, as reaching
 this means your dataset has redundant data.</p>
 </li>
-<li><p class="first"><strong>Percent of individual variability</strong></p>
+<li><p><strong>Percent of individual variability</strong></p>
 <p>Instead of using principal components until we reach a cumulative
 percent of variability, we can instead use principal components
 until a new component wouldn’t add much variability. In the plot
@@ -329,7 +329,7 @@ them until a variance is reached.</p>
 <p>Our example code, <a class="reference external" href="https://github.com/machinelearningmindset/machine-learning-course/blob/master/code/unsupervised/PCA/pca.py">pca.py</a>, shows you how to perform principal component
 analysis on a dataset of random x, y pairs. The script goes through a
 short process of generating this data, then calls sklearn’s PCA module:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find two principal components from our given dataset</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find two principal components from our given dataset</span>
 <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 </pre></div>
@@ -337,14 +337,14 @@ short process of generating this data, then calls sklearn’s PCA module:</p>
 <p>Each step in the process includes helpful visualizations using
 matplotlib. For instance, the principal components fitted above are
 plotted as two vectors on the dataset:</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/pca5.png" src="../../_images/pca5.png" />
 </div>
 <p>The script also shows how to perform dimensionality reduction, discussed
 above. In sklearn, this is done by simply calling the transform method
 once a PCA is fitted, or doing both steps at the same time with
 fit_transform:</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reduce the dimensionality of our data using a PCA transformation</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reduce the dimensionality of our data using a PCA transformation</span>
 <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">transformed_points</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 </pre></div>
@@ -352,19 +352,19 @@ fit_transform:</p>
 <p>The end result of our transformation is just a series of X values,
 though the code example performs an inverse transformation for plotting
 the result in the following graph:</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/pca6.png" src="../../_images/pca6.png" />
 </div>
 </div>
 <div class="section" id="references">
 <h2><a class="toc-backref" href="#id12">References</a><a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><a class="reference external" href="http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf">http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf</a></li>
-<li><a class="reference external" href="https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c">https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c</a></li>
-<li><a class="reference external" href="https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60">https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Principal_component_analysis">https://en.wikipedia.org/wiki/Principal_component_analysis</a></li>
-<li><a class="reference external" href="https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues">https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues</a></li>
-<li><a class="reference external" href="https://www.centerspace.net/clustering-analysis-part-i-principal-component-analysis-pca">https://www.centerspace.net/clustering-analysis-part-i-principal-component-analysis-pca</a></li>
+<li><p><a class="reference external" href="http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf">http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c">https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60">https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Principal_component_analysis">https://en.wikipedia.org/wiki/Principal_component_analysis</a></p></li>
+<li><p><a class="reference external" href="https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues">https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues</a></p></li>
+<li><p><a class="reference external" href="https://www.centerspace.net/clustering-analysis-part-i-principal-component-analysis-pca">https://www.centerspace.net/clustering-analysis-part-i-principal-component-analysis-pca</a></p></li>
 </ol>
 </div>
 </div>

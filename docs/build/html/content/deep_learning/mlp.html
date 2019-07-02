@@ -193,14 +193,14 @@
 <h1>Multi-layer Perceptron<a class="headerlink" href="#multi-layer-perceptron" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#overview" id="id1">Overview</a></li>
-<li><a class="reference internal" href="#motivation" id="id2">Motivation</a></li>
-<li><a class="reference internal" href="#what-is-a-node" id="id3">What is a node?</a></li>
-<li><a class="reference internal" href="#what-defines-a-multilayer-perceptron" id="id4">What defines a multilayer perceptron?</a></li>
-<li><a class="reference internal" href="#what-is-backpropagation" id="id5">What is backpropagation?</a></li>
-<li><a class="reference internal" href="#summary" id="id6">Summary</a></li>
-<li><a class="reference internal" href="#further-resources" id="id7">Further Resources</a></li>
-<li><a class="reference internal" href="#references" id="id8">References</a></li>
+<li><p><a class="reference internal" href="#overview" id="id1">Overview</a></p></li>
+<li><p><a class="reference internal" href="#motivation" id="id2">Motivation</a></p></li>
+<li><p><a class="reference internal" href="#what-is-a-node" id="id3">What is a node?</a></p></li>
+<li><p><a class="reference internal" href="#what-defines-a-multilayer-perceptron" id="id4">What defines a multilayer perceptron?</a></p></li>
+<li><p><a class="reference internal" href="#what-is-backpropagation" id="id5">What is backpropagation?</a></p></li>
+<li><p><a class="reference internal" href="#summary" id="id6">Summary</a></p></li>
+<li><p><a class="reference internal" href="#further-resources" id="id7">Further Resources</a></p></li>
+<li><p><a class="reference internal" href="#references" id="id8">References</a></p></li>
 </ul>
 </div>
 <div class="section" id="overview">
@@ -274,7 +274,7 @@ If you would like to see the math, check out this <a class="reference external" 
 <p>Take a look at this screenshot taken from the <a class="reference external" href="https://playground.tensorflow.org/">tensorflow</a> test site linked earlier.
 Here, we are training a neural network to classify the blue dots and the orange dots.
 The choices made for the nodes here are arbitrary, and we encourage you to mess around with them.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="Tensorflow site 1" src="../../_images/MLP_0.PNG" />
 </div>
 <p>To talk about backpropagation, let’s consider what this network will do the first time step.
@@ -285,13 +285,13 @@ Then, it will change the weights accordingly, so weights that were way off will 
 In these early steps, it will have a high <strong>learning rate</strong>, making the weights more volatile.
 After a few iterations, it will be much more stable as it should need smaller adjustments.
 With that in mind, let’s move forward one time step.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="Tensorflow site 2" src="../../_images/MLP_1.PNG" />
 </div>
 <p>Now, the network has a vague idea of how to classify the data.
 It has a loose circle which will become more clear as we go on.
 Let’s jump forward a few more steps.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="Tensorflow site 3" src="../../_images/MLP_2.PNG" />
 </div>
 <p>As you can see, the model has developed much better performance, classifying most of the points accurately.
@@ -315,12 +315,12 @@ fill in some of the details on neural networks.</p>
 <div class="section" id="references">
 <h2><a class="toc-backref" href="#id8">References</a><a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><a class="reference external" href="https://playground.tensorflow.org/">https://playground.tensorflow.org/</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Universal_approximation_theorem">https://en.wikipedia.org/wiki/Universal_approximation_theorem</a></li>
-<li><a class="reference external" href="https://www.techopedia.com/definition/20879/multilayer-perceptron-mlp">https://www.techopedia.com/definition/20879/multilayer-perceptron-mlp</a></li>
-<li><a class="reference external" href="http://neuralnetworksanddeeplearning.com/chap2.html">http://neuralnetworksanddeeplearning.com/chap2.html</a></li>
-<li><a class="reference external" href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi</a></li>
-<li><a class="reference external" href="http://cs231n.stanford.edu/">http://cs231n.stanford.edu/</a></li>
+<li><p><a class="reference external" href="https://playground.tensorflow.org/">https://playground.tensorflow.org/</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Universal_approximation_theorem">https://en.wikipedia.org/wiki/Universal_approximation_theorem</a></p></li>
+<li><p><a class="reference external" href="https://www.techopedia.com/definition/20879/multilayer-perceptron-mlp">https://www.techopedia.com/definition/20879/multilayer-perceptron-mlp</a></p></li>
+<li><p><a class="reference external" href="http://neuralnetworksanddeeplearning.com/chap2.html">http://neuralnetworksanddeeplearning.com/chap2.html</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi</a></p></li>
+<li><p><a class="reference external" href="http://cs231n.stanford.edu/">http://cs231n.stanford.edu/</a></p></li>
 </ol>
 </div>
 </div>

@@ -197,18 +197,19 @@
 <h1>Naive Bayes Classification<a class="headerlink" href="#naive-bayes-classification" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#motivation" id="id7">Motivation</a></li>
-<li><a class="reference internal" href="#what-is-it" id="id8">What is it?</a></li>
-<li><a class="reference internal" href="#bayes-theorem" id="id9">Bayes’ Theorem</a></li>
-<li><a class="reference internal" href="#naive-bayes" id="id10">Naive Bayes</a></li>
-<li><a class="reference internal" href="#algorithms" id="id11">Algorithms</a><ul>
-<li><a class="reference internal" href="#gaussian-model-continuous" id="id12">Gaussian Model (Continuous)</a></li>
-<li><a class="reference internal" href="#multinomial-model-discrete" id="id13">Multinomial Model (Discrete)</a></li>
-<li><a class="reference internal" href="#bernoulli-model-discrete" id="id14">Bernoulli Model (Discrete)</a></li>
+<li><p><a class="reference internal" href="#motivation" id="id7">Motivation</a></p></li>
+<li><p><a class="reference internal" href="#what-is-it" id="id8">What is it?</a></p></li>
+<li><p><a class="reference internal" href="#bayes-theorem" id="id9">Bayes’ Theorem</a></p></li>
+<li><p><a class="reference internal" href="#naive-bayes" id="id10">Naive Bayes</a></p></li>
+<li><p><a class="reference internal" href="#algorithms" id="id11">Algorithms</a></p>
+<ul>
+<li><p><a class="reference internal" href="#gaussian-model-continuous" id="id12">Gaussian Model (Continuous)</a></p></li>
+<li><p><a class="reference internal" href="#multinomial-model-discrete" id="id13">Multinomial Model (Discrete)</a></p></li>
+<li><p><a class="reference internal" href="#bernoulli-model-discrete" id="id14">Bernoulli Model (Discrete)</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#conclusion" id="id15">Conclusion</a></li>
-<li><a class="reference internal" href="#references" id="id16">References</a></li>
+<li><p><a class="reference internal" href="#conclusion" id="id15">Conclusion</a></p></li>
+<li><p><a class="reference internal" href="#references" id="id16">References</a></p></li>
 </ul>
 </div>
 <div class="section" id="motivation">
@@ -219,36 +220,36 @@ some preexisting class. Consider the following example.</p>
 example, we have three existing fruit categories: apple, blueberry, and
 coconut. Each of these fruits have three features we care about: size, weight,
 and color. This information is shown in <em>Figure 1</em>.</p>
-<table border="1" class="docutils" id="id2">
+<table class="docutils align-default" id="id2">
 <caption><span class="caption-text"><strong>Figure 1. A table of fruit characteristics</strong></span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head stub">&#160;</th>
-<th class="head">Apple</th>
-<th class="head">Blueberry</th>
-<th class="head">Coconut</th>
+<thead>
+<tr class="row-odd"><th class="head stub"></th>
+<th class="head"><p>Apple</p></th>
+<th class="head"><p>Blueberry</p></th>
+<th class="head"><p>Coconut</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><th class="stub">Size</th>
-<td>Moderate</td>
-<td>Small</td>
-<td>Large</td>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Size</p></th>
+<td><p>Moderate</p></td>
+<td><p>Small</p></td>
+<td><p>Large</p></td>
 </tr>
-<tr class="row-odd"><th class="stub">Weight</th>
-<td>Moderate</td>
-<td>Light</td>
-<td>Heavy</td>
+<tr class="row-odd"><th class="stub"><p>Weight</p></th>
+<td><p>Moderate</p></td>
+<td><p>Light</p></td>
+<td><p>Heavy</p></td>
 </tr>
-<tr class="row-even"><th class="stub">Color</th>
-<td>Red</td>
-<td>Blue</td>
-<td>Brown</td>
+<tr class="row-even"><th class="stub"><p>Color</p></th>
+<td><p>Red</p></td>
+<td><p>Blue</p></td>
+<td><p>Brown</p></td>
 </tr>
 </tbody>
 </table>
@@ -277,9 +278,9 @@ Bayes’ Theorem is, don’t worry! We will explain it in the next section.</p>
 <h2><a class="toc-backref" href="#id9">Bayes’ Theorem</a><a class="headerlink" href="#bayes-theorem" title="Permalink to this headline">¶</a></h2>
 <p>Bayes’ Theorem [<em>Equation 1</em>] is a very useful result that shows up in
 probability theory and other disciplines.</p>
-<div class="figure" id="id3">
+<div class="figure align-default" id="id3">
 <img alt="../../_images/Bayes.png" src="../../_images/Bayes.png" />
-<p class="caption"><span class="caption-text"><strong>Equation 1. Bayes’ Theorem</strong></span></p>
+<p class="caption"><span class="caption-text"><strong>Equation 1. Bayes’ Theorem</strong></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>With Bayes’ Theorem, we can examine conditional probabilities (the probability
 of an event happening given another event has happened). P(A|B) is the
@@ -329,10 +330,10 @@ away you go. This is another big assumption because many features do not
 follow a normal distribution. While this is true, assuming a normal
 distribution makes our calculations a whole lot easier. We use Gaussian models
 when features are not counts and include decimal values.</p>
-<div class="figure" id="id4">
+<div class="figure align-default" id="id4">
 <img alt="../../_images/Bell_Curve.png" src="../../_images/Bell_Curve.png" />
 <p class="caption"><span class="caption-text"><strong>Figure 2. A normal distribution with the iconic bell curve shape</strong>
-[<a class="reference external" href="https://github.com/machinelearningmindset/machine-learning-course/blob/master/code/supervised/Naive_Bayes/bell_curve.py">code</a>]</span></p>
+[<a class="reference external" href="https://github.com/machinelearningmindset/machine-learning-course/blob/master/code/supervised/Naive_Bayes/bell_curve.py">code</a>]</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 <div class="legend">
 </div>
 </div>
@@ -352,29 +353,29 @@ occurs. For example, we might want to count how often the word “count” appea
 on this page. <em>Figure 3</em> shows the sort of data we might use with a
 multinomial model. If we know the counts will only be one of two values, we
 should use a Bernoulli model instead.</p>
-<table border="1" class="docutils" id="id5">
+<table class="docutils align-default" id="id5">
 <caption><span class="caption-text"><strong>Figure 3. A table of word frequencies for this page</strong></span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head stub">Word</th>
-<th class="head">Frequency</th>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Word</p></th>
+<th class="head"><p>Frequency</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><th class="stub">Algebra</th>
-<td>0</td>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Algebra</p></th>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><th class="stub">Big</th>
-<td>1</td>
+<tr class="row-odd"><th class="stub"><p>Big</p></th>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><th class="stub">Count</th>
-<td>2</td>
+<tr class="row-even"><th class="stub"><p>Count</p></th>
+<td><p>2</p></td>
 </tr>
-<tr class="row-odd"><th class="stub">Data</th>
-<td>12</td>
+<tr class="row-odd"><th class="stub"><p>Data</p></th>
+<td><p>12</p></td>
 </tr>
 </tbody>
 </table>
@@ -397,29 +398,29 @@ occurred. For example, we might want to check if the word “count” appears at
 all on this page. We can also use Bernoulli models when features only have 2
 possible values like red or blue. <em>Figure 4</em> shows the sort of data we might use with a
 Bernoulli model.</p>
-<table border="1" class="docutils" id="id6">
+<table class="docutils align-default" id="id6">
 <caption><span class="caption-text"><strong>Figure 4. A table of word appearances on this page</strong></span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head stub">Word</th>
-<th class="head">Present?</th>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Word</p></th>
+<th class="head"><p>Present?</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><th class="stub">Algebra</th>
-<td>False</td>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Algebra</p></th>
+<td><p>False</p></td>
 </tr>
-<tr class="row-odd"><th class="stub">Big</th>
-<td>True</td>
+<tr class="row-odd"><th class="stub"><p>Big</p></th>
+<td><p>True</p></td>
 </tr>
-<tr class="row-even"><th class="stub">Count</th>
-<td>True</td>
+<tr class="row-even"><th class="stub"><p>Count</p></th>
+<td><p>True</p></td>
 </tr>
-<tr class="row-odd"><th class="stub">Data</th>
-<td>True</td>
+<tr class="row-odd"><th class="stub"><p>Data</p></th>
+<td><p>True</p></td>
 </tr>
 </tbody>
 </table>
@@ -447,10 +448,10 @@ classification problems.</p>
 <div class="section" id="references">
 <h2><a class="toc-backref" href="#id16">References</a><a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><a class="reference external" href="https://machinelearningmastery.com/naive-bayes-classifier-scratch-python/">https://machinelearningmastery.com/naive-bayes-classifier-scratch-python/</a></li>
-<li><a class="reference external" href="https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/">https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/</a></li>
-<li><a class="reference external" href="https://towardsdatascience.com/naive-bayes-in-machine-learning-f49cc8f831b4">https://towardsdatascience.com/naive-bayes-in-machine-learning-f49cc8f831b4</a></li>
-<li><a class="reference external" href="https://medium.com/machine-learning-101/chapter-1-supervised-learning-and-naive-bayes-classification-part-1-theory-8b9e361897d5">https://medium.com/machine-learning-101/chapter-1-supervised-learning-and-naive-bayes-classification-part-1-theory-8b9e361897d5</a></li>
+<li><p><a class="reference external" href="https://machinelearningmastery.com/naive-bayes-classifier-scratch-python/">https://machinelearningmastery.com/naive-bayes-classifier-scratch-python/</a></p></li>
+<li><p><a class="reference external" href="https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/">https://www.analyticsvidhya.com/blog/2017/09/naive-bayes-explained/</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/naive-bayes-in-machine-learning-f49cc8f831b4">https://towardsdatascience.com/naive-bayes-in-machine-learning-f49cc8f831b4</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/machine-learning-101/chapter-1-supervised-learning-and-naive-bayes-classification-part-1-theory-8b9e361897d5">https://medium.com/machine-learning-101/chapter-1-supervised-learning-and-naive-bayes-classification-part-1-theory-8b9e361897d5</a></p></li>
 </ol>
 </div>
 </div>
